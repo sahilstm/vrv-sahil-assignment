@@ -1,0 +1,21 @@
+@import "../styles/colors.scss";
+.dropdown {
+    select {
+      width: 100%;
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid $primary;
+      border-radius: 4px;
+      background-color: transparent;
+      cursor: pointer;
+  
+      &:focus {
+        border-color: $primary;
+        outline: none;
+      }
+    }
+  }
+  .dropdown.disabled {
+    pointer-events: none;
+  }
+  

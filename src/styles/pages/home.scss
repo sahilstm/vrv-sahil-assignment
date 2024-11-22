@@ -1,0 +1,36 @@
+@import "../colors.scss";
+.home {
+    padding: 0;
+    background: url("../../assests/glow/Banner\ Glow\ Round.png");
+    background-color: #040619;
+    color: $white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items:flex-start;
+    justify-content:flex-start;
+    flex-direction: column;
+    width: 100%;
+    .footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 10px;
+        background-color: $primary;
+        color: $white;
+        text-align: center;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        p {
+            span {
+                margin-right: 0.4rem;
+            }
+        }
+        
+    }
+}

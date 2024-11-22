@@ -1,0 +1,116 @@
+@import "../Styles/colors.scss";
+
+.cms-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6em;
+  border-radius: 0.4em;
+  font-size: 0.8em;
+  font-weight: 600;
+  padding-left: 1em;
+  padding-right: 1em;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  min-width: 110px;
+  color: $white;
+  &.outline {
+    background-color: transparent;
+    outline: 1px solid $blue;
+    color: $blue;
+
+    p {
+      color: $blue;
+    }
+
+    &:hover {
+      background-color: #cad9ff;
+    }
+
+    &:focus {
+      border: none;
+    }
+
+    &:active {
+      outline: 2px solid $blue;
+    }
+  }
+
+  &.dark-light {
+    background-color: $primary;
+    color: $white;
+
+    &:hover {
+      background-color: #040619a1;
+    }
+
+    &:focus {
+      background-color: #040619a1;
+    }
+
+    &:active {
+      background-color: #040619a1;
+    }
+  }
+
+  &.light {
+    background-color: #cad9ff;
+    color: $blue;
+
+    &:hover {
+      background-color: #aac0fa;
+    }
+
+    &:focus {
+      background-color: #aac0fa;
+    }
+
+    &:active {
+      background-color: #cad9ff;
+    }
+  }
+
+  &.dark {
+    background-color: $primary;
+    color: $white;
+
+    &:hover {
+      background-color: #37393e;
+    }
+    &:focus,
+    &:active {
+      background-color: #4d525e;
+    }
+  }
+  &.danger {
+    background-color: #fd2b2b;
+    color: $white;
+    &:hover {
+      background-color: #ff4e4e;
+    }
+    &:focus,
+    &:active {
+      background-color: #e63131;
+    }
+  }
+  &.cancel {
+    border: 1px solid #0d0e12;
+    color: $primary;
+    background-color: transparent;
+    &:hover {
+      background-color: #dadeec;
+    }
+    &:focus,
+    &:active {
+      background-color: #d2d5df;
+    }
+  }
+  &.disabled {
+    opacity: 0.6;
+  }
+  &.fullWidth {
+    width: 100%;
+  }
+}

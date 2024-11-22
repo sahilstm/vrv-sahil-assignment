@@ -1,0 +1,65 @@
+@import "../styles/colors.scss";
+.multi-select-dropdown {
+  position: relative;
+  width: 100%;
+  font-family: Arial, sans-serif;
+
+  .dropdown-header {
+    border: 1px solid $primary;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .arrow {
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    transition: transform 0.2s ease-in-out;
+
+    &.open {
+      transform: rotate(-135deg);
+    }
+  }
+
+  .dropdown-options {
+    position: relative;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #cad9ff;
+    border: 1px solid $primary;
+    border-radius: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 100;
+    margin-top: 2px;
+
+    .dropdown-option {
+      padding: 10px;
+      cursor: pointer;
+      border-bottom: 1px solid $primary;
+      transition: all 0.3s ease-in;
+
+      &:hover {
+        background-color: $primary;
+        color: $white;
+        border-bottom: 1px solid $white;
+      }
+
+      &.selected {
+        background-color: $primary;
+        color: #ffffff;
+        border-bottom: 1px solid $white;
+      }
+    }
+    .dropdown-option:last-child {
+      border-bottom: none;
+    }
+  }
+}

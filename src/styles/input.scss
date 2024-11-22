@@ -1,0 +1,102 @@
+@import "../Styles/colors.scss";
+
+$inactive-border: #dcdcdc;
+$inactive-color: $primary;
+$hover-border: $primary;
+$hover-color: $primary;
+$disabled-border: #9e9e9e;
+$disabled-color: #9e9e9e;
+$active-border: #1e3d8c;
+$active-color: #000;
+$error-border: #dc2626;
+$placeholder: #a7adc3;
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  fill: #000;
+}
+.input-icon {
+  position: absolute;
+  right: 10px;
+  color: $white;
+  font-size: 1.4rem;
+}
+
+.search-input {
+  width: 400px;
+  padding: 12px 6px 12px 8px;
+  border: 1px solid $lightGrey;
+  border-radius: 6px;
+  outline: none;
+  background-color: transparent;
+  color: $white;
+  font-size: 1rem;
+  transition: background-color 0.3s, border-color 0.3s;
+  &.dark {
+    color: $primary;
+    border: 1px solid $primary;
+
+    &:hover {
+      border: 0.6px solid $primary;
+    }
+    &:active {
+      border: 0.6px solid $primary;
+    }
+    &:focus {
+      border: 0.6px solid $primary;
+    }
+  }
+}
+
+.search-input:hover {
+  background-color: rgba(255, 255, 255, 0.051);
+  border-color: $white;
+}
+
+.search-input:active {
+  background-color: rgba(255, 255, 255, 0.051);
+  border-color: $white;
+}
+.search-input:focus {
+  background-color: rgba(255, 255, 255, 0.051);
+  border-color: $white;
+}
+
+.search-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+  cursor: pointer;
+}
+@media (max-width: 480px) {
+  .search-input {
+    width: 200px;
+    padding: 14px 8px 14px 10px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .search-input {
+    width: 200px;
+    padding: 14px 8px 14px 10px;
+    font-size: 0.8rem;
+  }
+}
